@@ -8,7 +8,7 @@ use Symfony\Component\Routing\Annotation\Route;
 class MainController extends AbstractController
 {
     /**
-     * @Route("/main", name="sevim_gallery_main")
+     * @Route("/", name="sevim_gallery_main")
      */
     public function index()
     {

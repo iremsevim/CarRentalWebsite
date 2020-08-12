@@ -2,6 +2,15 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="3f5b0167-daac-4a33-b5ea-fdfeb1a32a87" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.env" beforeDir="false" afterPath="$PROJECT_DIR$/.env" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/composer.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/main/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/assets/main/style.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Controller/SevimGallery/MainController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/SevimGallery/MainController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/Main.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/Main.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/admin/admin/index.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/admin/admin/index.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/sevim_gallery/header.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/sevim_gallery/header.html.twig" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/sevim_gallery/main/index.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/sevim_gallery/main/index.html.twig" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -132,11 +141,13 @@
     <property name="nodejs_package_manager_path" value="npm" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/templates/admin" />
-    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/templates" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/templates/admin" />
+      <recent name="$PROJECT_DIR$/templates/admin/admin" />
+      <recent name="$PROJECT_DIR$/src/Controller/Admin" />
     </key>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
@@ -148,7 +159,8 @@
       <option name="presentableId" value="Default" />
       <updated>1597213852789</updated>
       <workItem from="1597213857077" duration="7541000" />
-      <workItem from="1597232873065" duration="80000" />
+      <workItem from="1597232873065" duration="6706000" />
+      <workItem from="1597246314805" duration="1142000" />
     </task>
     <servers />
   </component>
@@ -176,7 +188,7 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="php">
           <url>file://$PROJECT_DIR$/templates/admin/admin/index.html.twig</url>
-          <line>5</line>
+          <line>6</line>
           <option name="timeStamp" value="3" />
         </line-breakpoint>
       </breakpoints>
