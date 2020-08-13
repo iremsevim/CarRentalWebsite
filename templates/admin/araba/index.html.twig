@@ -1,0 +1,61 @@
+{% extends 'Adminbase.html.twig' %}
+
+{% block title %}Araba index{% endblock %}
+
+{% block body %}
+<div class="agileinfo-grap">
+    <header class="panel-heading">
+        Arabalar
+    </header>
+
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Title</th>
+                <th>Keywords</th>
+                <th>Description</th>
+                <th>Image</th>
+                <th>Brand</th>
+                <th>Price</th>
+                <th>Model</th>
+                <th>Gear</th>
+                <th>Fue</th>
+                <th>Modealyear</th>
+                <th>Status</th>
+                <th>Created_at</th>
+                <th>actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for araba in arabas %}
+            <tr>
+                <td>{{ araba.id }}</td>
+                <td>{{ araba.title }}</td>
+                <td>{{ araba.Keywords }}</td>
+                <td>{{ araba.Description }}</td>
+                <td>{{ araba.Image }}</td>
+                <td>{{ araba.Brand }}</td>
+                <td>{{ araba.Price }}</td>
+                <td>{{ araba.Model }}</td>
+                <td>{{ araba.Gear }}</td>
+                <td>{{ araba.Fue }}</td>
+                <td>{{ araba.Modealyear }}</td>
+                <td>{{ araba.status }}</td>
+                <td>{{ araba.createdAt ? araba.createdAt|date('Y-m-d H:i:s') : '' }}</td>
+                <td>
+                    <a href="{{ path('admin_araba_show', {'id': araba.id}) }}">show</a>
+                    <a href="{{ path('admin_araba_edit', {'id': araba.id}) }}">edit</a>
+                </td>
+            </tr>
+        {% else %}
+            <tr>
+                <td colspan="14">no records found</td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+    <a href="{{ path('admin_araba_new') }}">Create new</a>
+</div>
+    {% endblock %}

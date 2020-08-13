@@ -3,11 +3,13 @@
 {% block title %}Category index{% endblock %}
 
 {% block body %}
-<section id="main-content">
-<section class="wrapper">
-    <h1>Category Düzenleme Paneli</h1>
+<div class="agileinfo-grap">
 
-    <table class="table">
+    <h1></h1>
+    <div class="panel-heading">
+        Kategori Düzenleme Paneli
+    </div>
+    <table class="table" >
         <thead>
             <tr>
                 <th>Id</th>
@@ -48,6 +50,5 @@
     </table>
 
     <a href="{{ path('category_new') }}">Create new</a>
-    </section>
-</section>
+</div>
 {% endblock %}

@@ -2,21 +2,27 @@
 
 namespace App\Form;
 
-use App\Entity\Category;
+use App\Entity\Araba;
 use Symfony\Component\Form\AbstractType;
 use Symfony\Component\Form\FormBuilderInterface;
 use Symfony\Component\OptionsResolver\OptionsResolver;
 
-class CategoryType extends AbstractType
+class ArabaType extends AbstractType
 {
     public function buildForm(FormBuilderInterface $builder, array $options)
     {
         $builder
-            ->add('parentid')
             ->add('title')
-            ->add('keywords')
-            ->add('description')
-            ->add('image')
+            ->add('Category')
+            ->add('Keywords')
+            ->add('Description')
+            ->add('Image')
+            ->add('Brand')
+            ->add('Price')
+            ->add('Model')
+            ->add('Gear')
+            ->add('Fue')
+            ->add('Modealyear')
             ->add('status')
         ;
     }
@@ -24,8 +30,7 @@ class CategoryType extends AbstractType
     public function configureOptions(OptionsResolver $resolver)
     {
         $resolver->setDefaults([
-            'data_class' => Category::class,
-            'csrf_protection'=>false,
+            'data_class' => Araba::class,
         ]);
     }
 }

@@ -3,13 +3,15 @@
 {% block title %}New Category{% endblock %}
 
 {% block body %}
-<section id="main-content">
-    <section class="wrapper">
-    <h1>Create new Category</h1>
+<div class="agileinfo-grap">
+
+<header class="panel-heading">
+       Crate New Category
+    </header>
         {{  include('admin/category/_form.html.twig') }}
 
 
     <a href="{{ path('category_index') }}">back to list</a>
-    </section>
-    </section>
+</div>
+
 {% endblock %}

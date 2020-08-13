@@ -3,6 +3,8 @@
 namespace App\Entity;
 
 use App\Repository\CategoryRepository;
+use Doctrine\Common\Collections\ArrayCollection;
+use Doctrine\Common\Collections\Collection;
 use Doctrine\ORM\Mapping as ORM;
 
 /**
@@ -56,6 +58,16 @@ class Category
      * @ORM\Column(type="datetime", nullable=true)
      */
     private $updated_at;
+
+    /**
+     * @ORM\OneToMany(targetEntity=Araba::class, mappedBy="Category")
+     */
+    private $arabas;
+
+    public function __construct()
+    {
+        $this->arabas = new ArrayCollection();
+    }
 
     public function getId(): ?int
     {
@@ -157,4 +169,40 @@ class Category
 
         return $this;
     }
+
+    /**
+     * @return Collection|Araba[]
+     */
+    public function getArabas(): Collection
+    {
+        return $this->arabas;
+    }
+
+    public function addAraba(Araba $araba): self
+    {
+        if (!$this->arabas->contains($araba)) {
+            $this->arabas[] = $araba;
+            $araba->setCategory($this);
+        }
+
+        return $this;
+    }
+
+    public function removeAraba(Araba $araba): self
+    {
+        if ($this->arabas->contains($araba)) {
+            $this->arabas->removeElement($araba);
+            // set the owning side to null (unless already changed)
+            if ($araba->getCategory() === $this) {
+                $araba->setCategory(null);
+            }
+        }
+
+        return $this;
+    }
+    public function __toString()
+    {
+        return $this->getTitle();
+    }
+
 }

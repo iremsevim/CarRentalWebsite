@@ -11,8 +11,13 @@
 
     {% block header %}{% include('admin/header.html.twig') %}{% endblock %}
     {% block sidebar %}{% include('admin/sidebar.html.twig') %}{% endblock %}
+    <section id="main-content">
+        <section class="wrapper">
     {% block body %}{% endblock %}
-    {% block footer %}{% include('admin/footer.html.twig') %}{% endblock %}
+        </section>
+        {% block footer %}{% include('admin/footer.html.twig') %}{% endblock %}
+    </section>
+
 
     </section>
 
