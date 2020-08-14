@@ -3,6 +3,8 @@
 namespace App\Entity;
 
 use App\Repository\ArabaRepository;
+use Doctrine\Common\Collections\ArrayCollection;
+use Doctrine\Common\Collections\Collection;
 use Doctrine\ORM\Mapping as ORM;
 
 /**
@@ -81,6 +83,23 @@ class Araba
      * @ORM\Column(type="datetime", nullable=true)
      */
     private $created_at;
+
+    /**
+     * @ORM\Column(type="text", nullable=true)
+     */
+    private $detail;
+
+    /**
+     * @ORM\OneToMany(targetEntity=Imggallery::class, mappedBy="araba")
+     */
+    private $imggalleries;
+
+
+
+    public function __construct()
+    {
+        $this->imggalleries = new ArrayCollection();
+    }
 
     public function getId(): ?int
     {
@@ -243,6 +262,52 @@ class Araba
     }
     public function __toString()
     {
-        return (string) $this->name;
+        return (string) $this->getTitle();
     }
+
+    public function getDetail(): ?string
+    {
+        return $this->detail;
+    }
+
+    public function setDetail(?string $detail): self
+    {
+        $this->detail = $detail;
+
+        return $this;
+    }
+
+    /**
+     * @return Collection|Imggallery[]
+     */
+    public function getImggalleries(): Collection
+    {
+        return $this->imggalleries;
+    }
+
+    public function addImggallery(Imggallery $imggallery): self
+    {
+        if (!$this->imggalleries->contains($imggallery)) {
+            $this->imggalleries[] = $imggallery;
+            $imggallery->setAraba($this);
+        }
+
+        return $this;
+    }
+
+    public function removeImggallery(Imggallery $imggallery): self
+    {
+        if ($this->imggalleries->contains($imggallery)) {
+            $this->imggalleries->removeElement($imggallery);
+            // set the owning side to null (unless already changed)
+            if ($imggallery->getAraba() === $this) {
+                $imggallery->setAraba(null);
+            }
+        }
+
+        return $this;
+    }
+
+
+
 }

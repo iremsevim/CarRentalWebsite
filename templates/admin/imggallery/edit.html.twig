@@ -1,0 +1,13 @@
+{% extends 'adminbase.html.twig' %}
+
+{% block title %}Edit Imggallery{% endblock %}
+
+{% block body %}
+    <h1>Edit Imggallery</h1>
+
+    {{ include('imggallery/_form.html.twig', {'button_label': 'Update'}) }}
+
+    <a href="{{ path('admin_imggallery_index') }}">back to list</a>
+
+    {{ include('imggallery/_delete_form.html.twig') }}
+{% endblock %}

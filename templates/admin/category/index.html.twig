@@ -32,7 +32,7 @@
                 <td>{{ category.title }}</td>
                 <td>{{ category.keywords }}</td>
                 <td>{{ category.description }}</td>
-                <td>{{ category.image }}</td>
+                <td><img src="{{ asset('uploads/images/'~category.image) }}"></td>
                 <td>{{ category.status }}</td>
                 <td>{{ category.createdAt ? category.createdAt|date('Y-m-d H:i:s') : '' }}</td>
                 <td>{{ category.updatedAt ? category.updatedAt|date('Y-m-d H:i:s') : '' }}</td>

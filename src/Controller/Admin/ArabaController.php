@@ -7,6 +7,7 @@ use App\Form\ArabaType;
 use App\Repository\ArabaRepository;
 use App\Repository\CategoryRepository;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
+use Symfony\Component\HttpFoundation\File\Exception\FileException;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
@@ -37,6 +38,20 @@ class ArabaController extends AbstractController
 
         if ($form->isSubmitted() && $form->isValid()) {
             $entityManager = $this->getDoctrine()->getManager();
+
+            /** @var  $file */
+            $file=$form['image']->getData();
+            if ($file)
+            {
+                $filename=$this->GenerateUniqueFileName().'.'.$file->guessExtension();
+                try
+                {
+                    $file->move($this->getParameter('image_directory'),$filename);
+                }catch (FileException $e){}
+                $araba->setImage($filename);
+            }
+
+
             $entityManager->persist($araba);
             $entityManager->flush();
 
@@ -70,6 +85,20 @@ class ArabaController extends AbstractController
         $form->handleRequest($request);
 
         if ($form->isSubmitted() && $form->isValid()) {
+
+            /** @var  $file */
+           $file=$form['Image']->getData();
+           if ($file)
+           {
+               $filename=$this->GenerateUniqueFileName().'.'.$file->guessExtension();
+               try
+               {
+                 $file->move($this->getParameter('image_directory'),$filename);
+               }catch (FileException $e){}
+               $araba->setImage($filename);
+           }
+
+
             $this->getDoctrine()->getManager()->flush();
 
             return $this->redirectToRoute('admin_araba_index');
@@ -81,6 +110,14 @@ class ArabaController extends AbstractController
             'araba' => $araba,
             'form' => $form->createView(),
         ]);
+    }
+
+    /**
+     * @return string
+     */
+    private  function  GenerateUniqueFileName()
+    {
+        return md5(uniqid());
     }
 
     /**
