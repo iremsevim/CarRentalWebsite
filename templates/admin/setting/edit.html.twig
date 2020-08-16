@@ -1,0 +1,19 @@
+{% extends 'adminbase.html.twig' %}
+
+{% block title %}Edit Setting{% endblock %}
+
+{% block body %}
+<div class="agileinfo-grap">
+    <section class="panel-success">
+        <header class="panel-heading">
+           Edit Settings
+        </header>
+
+    {{ include('Admin/setting/_form.html.twig', {'button_label': 'Update'}) }}
+<br>
+    <a class="btn btn-warning" href="{{ path('setting_index') }}">back to list</a>
+
+
+    </section>
+</div>
+{% endblock %}

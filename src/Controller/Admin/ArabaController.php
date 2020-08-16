@@ -22,8 +22,10 @@ class ArabaController extends AbstractController
      */
     public function index(ArabaRepository $arabaRepository): Response
     {
+        $carcount=count($arabaRepository->findAll());
         return $this->render('admin/araba/index.html.twig', [
             'arabas' => $arabaRepository->findAll(),
+            'carcount'=>$carcount,
         ]);
     }
 

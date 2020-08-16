@@ -1,0 +1,26 @@
+{% extends 'adminbase.html.twig' %}
+
+{% block title %}Edit User{% endblock %}
+
+{% block body %}
+<div class="agileinfo-grap">
+        <header class="panel-heading">
+           Edit User - ({{ user.name }})
+        </header>
+
+    {{ include('admin/user/_form.html.twig', {'button_label': 'Update'}) }}
+<br>
+    <table>
+        <td>
+            <a class="btn btn-warning" href="{{ path('admin_user_index') }}">back to list</a>
+
+        </td>
+        <td>
+            {{ include('admin/user/_delete_form.html.twig') }}
+
+        </td>
+    </table>
+
+
+</div>
+{% endblock %}

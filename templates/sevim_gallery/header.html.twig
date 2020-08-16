@@ -17,13 +17,14 @@
 
                 <!--== Single HeaderTop Start ==-->
                 <div class="col-lg-3 text-center">
-                    <i class="fa fa-clock-o"></i> Mon-Fri 09.00 - 17.00
+
                 </div>
                 <!--== Single HeaderTop End ==-->
 
                 <!--== Social Icons Start ==-->
                 <div class="col-lg-3 text-right">
                     <div class="header-social-icons">
+
                         <a href="#"><i class="fa fa-behance"></i></a>
                         <a href="#"><i class="fa fa-pinterest"></i></a>
                         <a href="#"><i class="fa fa-facebook"></i></a>
@@ -114,13 +115,20 @@
                                     <li><a href="404.html">404</a></li>
                                 </ul>
                             </li>
-                            <li><a href="#">Blog</a>
-                                <ul>
-                                    <li><a href="article.html">Blog Page</a></li>
-                                    <li><a href="article-details.html">Blog Details</a></li>
-                                </ul>
+                            <li>{% if is_granted('IS_AUTHENTICATED_FULLY') %}
+                                    <a href="#">{{ app.user.name }} {{ app.user.surname}} <i class="fa fa-user-circle"></i></a>
+                                    <ul>
+                                        <li><a href="/user">My Profile</a></li>
+                                        <li><a href="article-details.html">My Comments</a></li>
+                                        <li><a href="article-details.html">My Rezervations</a></li>
+                                        <li><a href="{{ path('app_logout') }}">Logout</a></li>
+                                    </ul>
+                                {% else %}
+                                    <a href="/login">Login <i class="fa fa-user-circle"></i></a>
+                                {% endif %}
+
                             </li>
-                            <li><a href="contact.html">Contact</a></li>
+
                         </ul>
                     </nav>
                 </div>

@@ -8,6 +8,7 @@ use phpDocumentor\Reflection\Type;
 use PhpParser\Node\Scalar\MagicConst\File;
 use Symfony\Bridge\Doctrine\Form\Type\EntityType;
 use Symfony\Component\Form\AbstractType;
+use Symfony\Component\Form\Extension\Core\Type\ChoiceType;
 use Symfony\Component\Form\Extension\Core\Type\FileType;
 use Symfony\Component\Form\FormBuilderInterface;
 use Symfony\Component\OptionsResolver\OptionsResolver;
@@ -33,7 +34,12 @@ class ArabaType extends AbstractType
             ->add('Gear')
             ->add('Fue')
             ->add('Modealyear')
-            ->add('status')
+            ->add('status',ChoiceType::class,[
+                'choices'=>[
+                    'True'=>'True',
+                    'False'=>'False'],
+
+            ])
         ;
     }
 

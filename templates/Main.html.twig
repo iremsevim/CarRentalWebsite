@@ -2,9 +2,9 @@
 <html>
     <head>
         <meta charset="UTF-8">
-        <title>{% block title %}Welcome!{% endblock %}</title>
-        <meta name="description" content="{% block description %} En iyi araç kiralama sitesi" {% endblock %}/>
-        <meta name="keywords" content="{% block keywords %} En iyi araç kiralama sitesi" {% endblock %}/>
+        <title>{% block title %}{{ adminsettings[0].title }}{% endblock %}</title>
+        <meta name="description" content="{% block description %} {{ adminsettings[0].description }} {% endblock %}"/>
+        <meta name="keywords" content="{% block keywords %} {{ adminsettings[0].keywords }} {% endblock %}"/>
         <meta name="author" content="İrem Sevim"/>
         {% block head %}{% include('sevim_gallery/head.html.twig') %}{% endblock %}
     </head>

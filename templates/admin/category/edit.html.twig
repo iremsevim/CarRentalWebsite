@@ -4,15 +4,27 @@
 
 {% block body %}
 
-<div class="agileinfo-grap">
-
-    <header class="panel-heading">
-        Edit Category
-    </header>
+    <div class="col-lg-12">
+        <section class="panel">
+            <header class="panel-heading">
+             Edit {{ category.title}}
+            </header>
     {{  include('admin/category/_form.html.twig', {'button_label': 'Update'}) }}
 
-    <a href="{{ path('category_index') }}">back to list</a>
+            <center>
+                <table class="table">
+                    <td>
+                        <a class="btn btn-warning" href="{{ path('category_index') }}">back to list</a>
+                    </td>
+                    <td>
+                        {{ include('admin/category/_delete_form.html.twig') }}
+                    </td>
+                </table>
 
-    {{ include('admin/category/_delete_form.html.twig') }}
+
+
+            </center>
+        </section>
+    </div>
 </div>
 {% endblock %}

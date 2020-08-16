@@ -1,0 +1,54 @@
+{% extends 'adminbase.html.twig' %}
+
+{% block title %}User{% endblock %}
+
+{% block body %}
+<div class="agileinfo-grap">
+    <header class="panel-heading">
+        User Details
+    </header>
+    <table class="table">
+        <tbody>
+            <tr>
+                <th>Id</th>
+                <td>{{ user.id }}</td>
+            </tr>
+            <tr>
+                <th>Email</th>
+                <td>{{ user.email }}</td>
+            </tr>
+            <tr>
+                <th>Roles</th>
+                <td>{{ user.roles ? user.roles|json_encode : '' }}</td>
+            </tr>
+            <tr>
+                <th>Password</th>
+                <td>{{ user.password }}</td>
+            </tr>
+            <tr>
+                <th>Name</th>
+                <td>{{ user.name }}</td>
+            </tr>
+            <tr>
+                <th>Surname</th>
+                <td>{{ user.surname }}</td>
+            </tr>
+            <tr>
+                <th>Image</th>
+                <td><img style="width:100%;height: 100%; max-height: 250px;max-width: 250px; " src="{{ asset('uploads/images/'~user.image) }}"> </td>
+            </tr>
+            <tr>
+                <th>Status</th>
+                <td>{{ user.status }}</td>
+            </tr>
+
+        </tbody>
+    </table>
+
+    <a class="btn btn-warning" href="{{ path('admin_user_index') }}">back to list</a>
+
+    <a class="btn btn-info" href="{{ path('admin_user_edit', {'id': user.id}) }}">edit</a>
+    <br><br>
+    {{ include('admin/user/_delete_form.html.twig') }}
+</div>
+{% endblock %}
