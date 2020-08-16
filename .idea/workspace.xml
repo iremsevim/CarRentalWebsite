@@ -2,68 +2,17 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="3f5b0167-daac-4a33-b5ea-fdfeb1a32a87" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/migrations/Version20200815080237.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/migrations/Version20200815111154.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/uploads/images/1b90d1ecbce2800444ce9bf1db022980.jpeg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/uploads/images/7ae3493677d359176511c5ea98810264.jpeg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/uploads/images/aed7b63e34d8c8abef1488d4c330f8f4.jpeg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Controller/Admin/SettingController.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Controller/Admin/UserController.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Controller/RegistrationController.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Controller/SecurityController.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Controller/UserController.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Entity/Setting.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Entity/User.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Form/RegistrationFormType.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Form/SettingType.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Form/UserType.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Repository/SettingRepository.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Repository/UserRepository.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Security/AppCustomAuthenticator.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/admin/setting/_delete_form.html.twig" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/admin/setting/_form.html.twig" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/admin/setting/edit.html.twig" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/admin/setting/index.html.twig" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/admin/setting/new.html.twig" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/admin/setting/show.html.twig" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/admin/user/_delete_form.html.twig" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/admin/user/_form.html.twig" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/admin/user/edit.html.twig" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/admin/user/index.html.twig" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/admin/user/new.html.twig" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/admin/user/show.html.twig" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/registration/adminregister.html.twig" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/registration/register.html.twig" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/security/adminlogin.html.twig" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/security/login.html.twig" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/user/_delete_form.html.twig" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/user/_form.html.twig" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/user/edit.html.twig" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/user/index.html.twig" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/user/new.html.twig" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/user/show.html.twig" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/user/usermenu.html.twig" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/security/loginuser.html.twig" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/user/usercomments.html.twig" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/config/packages/security.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/config/packages/security.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Controller/Admin/ArabaController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/Admin/ArabaController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Controller/SecurityController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/SecurityController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Controller/SevimGallery/MainController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/SevimGallery/MainController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Form/ArabaType.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Form/ArabaType.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Form/CategoryType.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Form/CategoryType.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/Main.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/Main.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/admin/araba/_form.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/admin/araba/_form.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/admin/araba/edit.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/admin/araba/edit.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/admin/araba/index.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/admin/araba/index.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/admin/araba/new.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/admin/araba/new.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/admin/category/_delete_form.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/admin/category/_delete_form.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/admin/category/_form.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/admin/category/_form.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/admin/category/edit.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/admin/category/edit.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/admin/category/index.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/admin/category/index.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/admin/category/new.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/admin/category/new.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/admin/category/show.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/admin/category/show.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/admin/header.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/admin/header.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/admin/imggallery/new.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/admin/imggallery/new.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/admin/sidebar.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/admin/sidebar.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Controller/UserController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/UserController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Entity/User.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/User.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/sevim_gallery/header.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/sevim_gallery/header.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/user/show.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/user/show.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/user/usermenu.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/user/usermenu.html.twig" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -193,20 +142,22 @@
     <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/templates/registration" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/templates/user" />
     <property name="nodejs_package_manager_path" value="npm" />
   </component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/templates/user" />
+      <recent name="$PROJECT_DIR$/templates/registration" />
+      <recent name="$PROJECT_DIR$/templates/security" />
+      <recent name="$PROJECT_DIR$/templates" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/templates/security" />
       <recent name="$PROJECT_DIR$/templates/admin" />
       <recent name="$PROJECT_DIR$/src/Controller/Admin" />
       <recent name="$PROJECT_DIR$/src" />
       <recent name="$PROJECT_DIR$/templates/admin/admin" />
-    </key>
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/templates/registration" />
-      <recent name="$PROJECT_DIR$/templates/security" />
-      <recent name="$PROJECT_DIR$/templates" />
     </key>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
@@ -224,6 +175,8 @@
       <workItem from="1597303189508" duration="23468000" />
       <workItem from="1597408015951" duration="21703000" />
       <workItem from="1597475936953" duration="22855000" />
+      <workItem from="1597589770551" duration="130000" />
+      <workItem from="1597611324851" duration="3995000" />
     </task>
     <servers />
   </component>
@@ -238,13 +191,13 @@
       <screen x="29" y="23" width="1571" height="877" />
     </state>
     <state x="519" y="270" key="#com.intellij.fileTypes.FileTypeChooser/29.23.1571.877@29.23.1571.877" timestamp="1597223685305" />
-    <state x="1142" y="346" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1597513048204">
+    <state x="1142" y="346" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1597613773115">
       <screen x="49" y="23" width="2511" height="1417" />
     </state>
     <state x="1114" y="328" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.2560.1440@0.0.2560.1440" timestamp="1597416988376" />
     <state x="712" y="223" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/28.23.1572.877@28.23.1572.877" timestamp="1597316453302" />
     <state x="1141" y="346" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/48.23.2512.1417@48.23.2512.1417" timestamp="1597493642173" />
-    <state x="1142" y="346" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/49.23.2511.1417@49.23.2511.1417" timestamp="1597513048204" />
+    <state x="1142" y="346" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/49.23.2511.1417@49.23.2511.1417" timestamp="1597613773115" />
     <state x="1142" y="346" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/50.23.2510.1417@50.23.2510.1417" timestamp="1597440966001" />
     <state x="1390" y="100" width="1070" height="1240" key="dock-window-1" timestamp="1597411177419">
       <screen x="0" y="0" width="2560" height="1440" />
@@ -316,6 +269,24 @@
           <url>file://$PROJECT_DIR$/templates/user/show.html.twig</url>
           <line>5</line>
           <option name="timeStamp" value="4" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="php-line-method">
+          <url>file://$PROJECT_DIR$/src/Controller/UserController.php</url>
+          <line>89</line>
+          <properties>
+            <option name="className" value="\App\Controller\UserController" />
+            <option name="methodName" value="show" />
+          </properties>
+          <option name="timeStamp" value="5" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="php-line-method">
+          <url>file://$PROJECT_DIR$/src/Controller/UserController.php</url>
+          <line>99</line>
+          <properties>
+            <option name="className" value="\App\Controller\UserController" />
+            <option name="methodName" value="edit" />
+          </properties>
+          <option name="timeStamp" value="6" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

@@ -31,6 +31,18 @@ class UserController extends AbstractController
     }
 
     /**
+     * @Route("/comments", name="user_comments", methods={"GET"})
+     */
+    public function comments(UserRepository $userRepository,SettingRepository $settingRepository): Response
+    {
+        $adminsettings=$settingRepository->findBy(['id'=>1]);
+        return $this->render('user/usercomments.html.twig', [
+            'users' => $userRepository->findAll(),
+            'adminsettings'=>$adminsettings,
+        ]);
+    }
+
+    /**
      * @Route("/new", name="user_new", methods={"GET","POST"})
      */
     public function new(Request $request,UserPasswordEncoderInterface $passwordEncoder): Response
@@ -85,7 +97,7 @@ class UserController extends AbstractController
     /**
      * @Route("/{id}/edit", name="user_edit", methods={"GET","POST"})
      */
-    public function edit(Request $request, User $user,SettingRepository $settingRepository): Response
+    public function edit(Request $request,$id, User $user,SettingRepository $settingRepository): Response
     {
         $form = $this->createForm(UserType::class, $user);
         $form->handleRequest($request);

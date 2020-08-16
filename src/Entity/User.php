@@ -71,6 +71,10 @@ class User implements UserInterface
     {
         return $this->id;
     }
+    public function getIdstring(): ?string
+    {
+        return (string)$this->id;
+    }
 
     public function getEmail(): ?string
     {
@@ -215,6 +219,10 @@ class User implements UserInterface
         $this->updated_at = $updated_at;
 
         return $this;
+    }
+    public function __toString()
+    {
+        return $this->getName();
     }
 
 
