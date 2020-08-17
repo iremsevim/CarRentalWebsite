@@ -1,0 +1,164 @@
+{% extends 'Main.html.twig' %}
+
+{% block body %}
+    <section id="slider-area">
+        <!--== slide Item One ==-->
+        <div class="single-slide-item overlay">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-5">
+                        <div class="book-a-car">
+                            <form action="index.html">
+                                <!--== Pick Up Location ==-->
+                                <div class="pickup-location book-item">
+                                    <h4>PICK-UP LOCATION:</h4>
+                                    <select class="custom-select">
+                                        <option selected="">Select</option>
+                                        <option value="1">Dhaka</option>
+                                        <option value="2">Comilla</option>
+                                        <option value="3">Barishal</option>
+                                        <option value="3">Rangpur</option>
+                                    </select>
+                                </div>
+                                <!--== Pick Up Location ==-->
+
+                                <!--== Pick Up Date ==-->
+                                <div class="pick-up-date book-item">
+                                    <h4>PICK-UP DATE:</h4>
+                                    <div role="wrapper" class="gj-datepicker gj-datepicker-bootstrap gj-unselectable input-group"><input id="startDate" placeholder="Pick Up Date" data-type="datepicker" data-guid="8fc87de8-0f24-7a0d-9336-44f94be681d4" data-datepicker="true" class="form-control" role="input" month="7" year="2020"><span class="input-group-append" role="right-icon"><span class="input-group-text"><i class="fa fa-calendar" aria-hidden="true"></i></span></span></div>
+
+                                    <div class="return-car">
+                                        <h4>Return DATE:</h4>
+                                        <div role="wrapper" class="gj-datepicker gj-datepicker-bootstrap gj-unselectable input-group"><input id="endDate" placeholder="Return Date" data-type="datepicker" data-guid="d8675e12-93d9-6b31-07b3-f0ecd5dab399" data-datepicker="true" class="form-control" role="input" month="7" year="2020"><span class="input-group-append" role="right-icon"><span class="input-group-text"><i class="fa fa-calendar" aria-hidden="true"></i></span></span></div>
+                                    </div>
+                                </div>
+                                <!--== Pick Up Location ==-->
+
+                                <!--== Car Choose ==-->
+                                <div class="choose-car-type book-item">
+                                    <h4>CHOOSE CAR TYPE:</h4>
+                                    <select class="custom-select">
+                                        <option selected="">Select</option>
+                                        <option value="1">BMW</option>
+                                        <option value="2">Audi</option>
+                                        <option value="3">Lexus</option>
+                                    </select>
+                                </div>
+                                <!--== Car Choose ==-->
+
+                                <div class="book-button text-center">
+                                    <button class="book-now-btn">Book Now</button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-7 text-right">
+                        <div class="display-table">
+                            <div class="display-table-cell">
+                                <div class="slider-right-text">
+                                    <h1>BOOK A CAR TODAY!</h1>
+                                    <p>FOR AS LOW AS $10 A DAY PLUS 15% DISCOUNT <br> FOR OUR RETURNING CUSTOMERS</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--== slide Item One ==-->
+    </section>
+    <section id="car-list-area" class="section-padding">
+        <div class="container">
+            <div class="row">
+                <!-- Car List Content Start -->
+                <div class="col-lg-8">
+                    <div class="car-details-content">
+                        <h2>OUR TREND CARS</h2>
+                        <div class="car-preview-crousel">
+                            {%  for sliderarabax in carsslider %}
+                                <div class="single-car-preview">
+                                   <a href="{{ path('main_araba_show',{'id':sliderarabax.id}) }}">
+                                       <img src="{{ asset('uploads/images/'~sliderarabax.image )}}" alt="JSOFT">
+                                   </a>
+                                </div>
+                            {% endfor %}
+                        </div>
+                    </div>
+                </div>
+                <!-- Car List Content End -->
+
+            </div>
+        </div>
+    </section>
+
+    <section id="funfact-area" class="overlay section-padding">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-11 col-md-12 m-auto">
+                    <div class="funfact-content-wrap">
+                        <div class="row">
+                            <!-- Single FunFact Start -->
+                            <div class="col-lg-4 col-md-6">
+                                <div class="single-funfact">
+                                    <div class="funfact-icon">
+                                        <i class="fa fa-smile-o"></i>
+                                    </div>
+                                    <div class="funfact-content">
+                                        <p><span class="counter">550</span>+</p>
+                                        <h4>HAPPY CLIENTS</h4>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Single FunFact End -->
+
+                            <!-- Single FunFact Start -->
+                            <div class="col-lg-4 col-md-6">
+                                <div class="single-funfact">
+                                    <div class="funfact-icon">
+                                        <i class="fa fa-car"></i>
+                                    </div>
+                                    <div class="funfact-content">
+                                        <p><span class="counter">{{ carcount }}</span>+</p>
+                                        <h4>CARS IN STOCK</h4>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Single FunFact End -->
+
+                            <!-- Single FunFact Start -->
+                            <div class="col-lg-4 col-md-6">
+                                <div class="single-funfact">
+                                    <div class="funfact-icon">
+                                        <i class="fa fa-bank"></i>
+                                    </div>
+                                    <div class="funfact-content">
+                                        <p><span class="counter">50</span>+</p>
+                                        <h4>office in cities</h4>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Single FunFact End -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="mobile-app-area"><div class="mbYTP_wrapper" id="wrapper_mobileapp-video-bg" style="position: absolute; z-index: 0; min-width: 100%; min-height: 100%; left: 0px; top: 0px; overflow: hidden; opacity: 1; transition-property: opacity; transition-duration: 500ms;"><iframe id="iframe_mobileapp-video-bg" class="playerBox" style="position: absolute; z-index: 0; width: 2135px; height: 1201px; top: 0px; left: 0px; overflow: hidden; opacity: 1; user-select: none; margin-top: -256px; margin-left: 0px; max-width: initial;" allowfullscreen="1" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" title="YouTube video player" src="https://www.youtube.com/embed/m5_AKjDdqaU?modestbranding=1&amp;autoplay=0&amp;controls=0&amp;showinfo=0&amp;rel=0&amp;enablejsapi=1&amp;version=3&amp;playerapiid=iframe_mobileapp-video-bg&amp;origin=*&amp;allowfullscreen=true&amp;wmode=transparent&amp;iv_load_policy=3&amp;playsinline=0&amp;html5=1&amp;widgetid=1" unselectable="on" width="640" height="360" frameborder="0"></iframe><div style="position: absolute; top: 0px; left: 0px; width: 100%; height: 100%;" class="YTPOverlay"></div></div>
+        <div class="container" style="position: relative;">
+            <div class="row">
+                <div class="col-lg-6">
+                    <div class="mobile-app-content">
+                        <h2>SAVE 30% WITH THE APP</h2>
+                        <p>Easy &amp; Fast - Book a car in 60 seconds</p>
+                        <div class="app-btns">
+                            <a href="#"><i class="fa fa-android"></i> Android Store</a>
+                            <a href="#"><i class="fa fa-apple"></i> Apple Store</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+{% endblock %}

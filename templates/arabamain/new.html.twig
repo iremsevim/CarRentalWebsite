@@ -1,0 +1,15 @@
+{% extends 'Adminbase.html.twig' %}
+
+{% block title %}New Araba{% endblock %}
+
+{% block body %}
+<div class="agileinfo-grap">
+    <header class="panel-heading">
+        Create New Car
+    </header>
+
+    {{ include('admin/araba/_form.html.twig') }}
+<br><br>
+    <a class="btn btn-warning" href="{{ path('admin_araba_index') }}">Back</a>
+</div>
+{% endblock %}

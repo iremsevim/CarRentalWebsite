@@ -1,0 +1,26 @@
+{% extends 'Adminbase.html.twig' %}
+
+{% block title %}Edit Araba{% endblock %}
+
+{% block body %}
+<div class="agileinfo-grap">
+
+    <header class="panel-heading">
+        Edit Car
+    </header>
+
+    {{ include('admin/araba/_form.html.twig', {'button_label': 'Update'}) }}
+<br>
+    <table class="table">
+        <td>
+            <a class="btn btn-warning" href="{{ path('admin_araba_index') }}">Back</a>
+        </td>
+        <td>
+            {{ include('admin/araba/_delete_form.html.twig') }}
+        </td>
+    </table>
+
+
+
+</div>
+{% endblock %}

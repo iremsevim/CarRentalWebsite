@@ -1,0 +1,74 @@
+{% extends 'Adminbase.html.twig' %}
+
+{% block title %}Araba{% endblock %}
+
+{% block body %}
+<div class="agileinfo-grap">
+    <header class="panel-heading">
+        Car Details
+    </header>
+
+    <table class="table">
+        <tbody>
+            <tr>
+                <th>Id</th>
+                <td>{{ araba.id }}</td>
+            </tr>
+            <tr>
+                <th>Title</th>
+                <td>{{ araba.title }}</td>
+            </tr>
+            <tr>
+                <th>Keywords</th>
+                <td>{{ araba.Keywords }}</td>
+            </tr>
+            <tr>
+                <th>Description</th>
+                <td>{{ araba.Description }}</td>
+            </tr>
+            <tr>
+                <th>Image</th>
+                <td>{{ araba.Image }}</td>
+            </tr>
+            <tr>
+                <th>Brand</th>
+                <td>{{ araba.Brand }}</td>
+            </tr>
+            <tr>
+                <th>Price</th>
+                <td>{{ araba.Price }}</td>
+            </tr>
+            <tr>
+                <th>Model</th>
+                <td>{{ araba.Model }}</td>
+            </tr>
+            <tr>
+                <th>Gear</th>
+                <td>{{ araba.Gear }}</td>
+            </tr>
+            <tr>
+                <th>Fue</th>
+                <td>{{ araba.Fue }}</td>
+            </tr>
+            <tr>
+                <th>Modealyear</th>
+                <td>{{ araba.Modealyear }}</td>
+            </tr>
+            <tr>
+                <th>Status</th>
+                <td>{{ araba.status }}</td>
+            </tr>
+            <tr>
+                <th>Created_at</th>
+                <td>{{ araba.createdAt ? araba.createdAt|date('Y-m-d H:i:s') : '' }}</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <a class="btn btn-primary" href="{{ path('admin_araba_index') }}">back to list</a>
+
+    <a class="btn btn-warning" href="{{ path('admin_araba_edit', {'id': araba.id}) }}">edit</a>
+    <br><br>
+    {{ include('admin/araba/_delete_form.html.twig') }}
+</div>
+{% endblock %}
