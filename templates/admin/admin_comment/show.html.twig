@@ -1,0 +1,54 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}AdminComment{% endblock %}
+
+{% block body %}
+    <h1>AdminComment</h1>
+
+    <table class="table">
+        <tbody>
+            <tr>
+                <th>Id</th>
+                <td>{{ admin_comment.id }}</td>
+            </tr>
+            <tr>
+                <th>Subject</th>
+                <td>{{ admin_comment.subject }}</td>
+            </tr>
+            <tr>
+                <th>Comment</th>
+                <td>{{ admin_comment.comment }}</td>
+            </tr>
+            <tr>
+                <th>Status</th>
+                <td>{{ admin_comment.status }}</td>
+            </tr>
+            <tr>
+                <th>Ip</th>
+                <td>{{ admin_comment.ip }}</td>
+            </tr>
+            <tr>
+                <th>Userid</th>
+                <td>{{ admin_comment.userid }}</td>
+            </tr>
+            <tr>
+                <th>Created_at</th>
+                <td>{{ admin_comment.createdAt ? admin_comment.createdAt|date('Y-m-d H:i:s') : '' }}</td>
+            </tr>
+            <tr>
+                <th>Updated_at</th>
+                <td>{{ admin_comment.updatedAt ? admin_comment.updatedAt|date('Y-m-d H:i:s') : '' }}</td>
+            </tr>
+            <tr>
+                <th>Rate</th>
+                <td>{{ admin_comment.rate }}</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <a href="{{ path('admin_comment_index') }}">back to list</a>
+
+    <a href="{{ path('admin_comment_edit', {'id': admin_comment.id}) }}">edit</a>
+
+    {{ include('admin_comment/_delete_form.html.twig') }}
+{% endblock %}
