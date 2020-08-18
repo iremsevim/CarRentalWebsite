@@ -1,0 +1,65 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}AdminReservation index{% endblock %}
+
+{% block body %}
+    <h1>AdminReservation index</h1>
+
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Userid</th>
+                <th>Arabaid</th>
+                <th>Name</th>
+                <th>Surname</th>
+                <th>Email</th>
+                <th>Phone</th>
+                <th>Checkin</th>
+                <th>Checkout</th>
+                <th>Days</th>
+                <th>Total</th>
+                <th>Ip</th>
+                <th>Note</th>
+                <th>Message</th>
+                <th>Status</th>
+                <th>Created_at</th>
+                <th>Updated_at</th>
+                <th>actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for admin_reservation in admin_reservations %}
+            <tr>
+                <td>{{ admin_reservation.id }}</td>
+                <td>{{ admin_reservation.userid }}</td>
+                <td>{{ admin_reservation.arabaid }}</td>
+                <td>{{ admin_reservation.name }}</td>
+                <td>{{ admin_reservation.surname }}</td>
+                <td>{{ admin_reservation.email }}</td>
+                <td>{{ admin_reservation.phone }}</td>
+                <td>{{ admin_reservation.checkin ? admin_reservation.checkin|date('Y-m-d H:i:s') : '' }}</td>
+                <td>{{ admin_reservation.checkout ? admin_reservation.checkout|date('Y-m-d H:i:s') : '' }}</td>
+                <td>{{ admin_reservation.days }}</td>
+                <td>{{ admin_reservation.total }}</td>
+                <td>{{ admin_reservation.ip }}</td>
+                <td>{{ admin_reservation.note }}</td>
+                <td>{{ admin_reservation.message }}</td>
+                <td>{{ admin_reservation.status }}</td>
+                <td>{{ admin_reservation.createdAt ? admin_reservation.createdAt|date('Y-m-d H:i:s') : '' }}</td>
+                <td>{{ admin_reservation.updatedAt ? admin_reservation.updatedAt|date('Y-m-d H:i:s') : '' }}</td>
+                <td>
+                    <a href="{{ path('admin_reservation_show', {'id': admin_reservation.id}) }}">show</a>
+                    <a href="{{ path('admin_reservation_edit', {'id': admin_reservation.id}) }}">edit</a>
+                </td>
+            </tr>
+        {% else %}
+            <tr>
+                <td colspan="18">no records found</td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+    <a href="{{ path('admin_reservation_new') }}">Create new</a>
+{% endblock %}

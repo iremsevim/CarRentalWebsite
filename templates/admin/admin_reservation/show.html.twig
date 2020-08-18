@@ -1,0 +1,86 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}AdminReservation{% endblock %}
+
+{% block body %}
+    <h1>AdminReservation</h1>
+
+    <table class="table">
+        <tbody>
+            <tr>
+                <th>Id</th>
+                <td>{{ admin_reservation.id }}</td>
+            </tr>
+            <tr>
+                <th>Userid</th>
+                <td>{{ admin_reservation.userid }}</td>
+            </tr>
+            <tr>
+                <th>Arabaid</th>
+                <td>{{ admin_reservation.arabaid }}</td>
+            </tr>
+            <tr>
+                <th>Name</th>
+                <td>{{ admin_reservation.name }}</td>
+            </tr>
+            <tr>
+                <th>Surname</th>
+                <td>{{ admin_reservation.surname }}</td>
+            </tr>
+            <tr>
+                <th>Email</th>
+                <td>{{ admin_reservation.email }}</td>
+            </tr>
+            <tr>
+                <th>Phone</th>
+                <td>{{ admin_reservation.phone }}</td>
+            </tr>
+            <tr>
+                <th>Checkin</th>
+                <td>{{ admin_reservation.checkin ? admin_reservation.checkin|date('Y-m-d H:i:s') : '' }}</td>
+            </tr>
+            <tr>
+                <th>Checkout</th>
+                <td>{{ admin_reservation.checkout ? admin_reservation.checkout|date('Y-m-d H:i:s') : '' }}</td>
+            </tr>
+            <tr>
+                <th>Days</th>
+                <td>{{ admin_reservation.days }}</td>
+            </tr>
+            <tr>
+                <th>Total</th>
+                <td>{{ admin_reservation.total }}</td>
+            </tr>
+            <tr>
+                <th>Ip</th>
+                <td>{{ admin_reservation.ip }}</td>
+            </tr>
+            <tr>
+                <th>Note</th>
+                <td>{{ admin_reservation.note }}</td>
+            </tr>
+            <tr>
+                <th>Message</th>
+                <td>{{ admin_reservation.message }}</td>
+            </tr>
+            <tr>
+                <th>Status</th>
+                <td>{{ admin_reservation.status }}</td>
+            </tr>
+            <tr>
+                <th>Created_at</th>
+                <td>{{ admin_reservation.createdAt ? admin_reservation.createdAt|date('Y-m-d H:i:s') : '' }}</td>
+            </tr>
+            <tr>
+                <th>Updated_at</th>
+                <td>{{ admin_reservation.updatedAt ? admin_reservation.updatedAt|date('Y-m-d H:i:s') : '' }}</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <a href="{{ path('admin_reservation_index') }}">back to list</a>
+
+    <a href="{{ path('admin_reservation_edit', {'id': admin_reservation.id}) }}">edit</a>
+
+    {{ include('admin_reservation/_delete_form.html.twig') }}
+{% endblock %}
